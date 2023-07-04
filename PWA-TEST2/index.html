@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PWA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#eeeeee">
+
+    <link rel="stylesheet" href="src/master.css">
+    <link rel="manifest" href="manifest.json">
+    
+    <script src="src/jquery3.6.0.js"></script>
+    <script src="src/index.js"></script>
+    
+</head>
+
+<body>
+  
+    <ul>
+        <li><a>Home</a></li>
+    </ul>
+    
+    <div id="Main">
+    <br><br>
+    <label><strong>SELECT FINANCIAL SCHEME:</strong></label><br><br>
+    <select onchange="HideForm('formfloat')" NAME="Finschemeee" id="Finschemetype"></select>&nbsp;&nbsp;
+    <button onclick="DisplayData()">SUBMIT</button>
+    <br><br>
+    </div>
+
+    <div class="floating-form" id="formfloat">       
+            <div class="form-row">
+                <label class="formlabel" for="identification">ID:</label>
+                <input type="text" id="finschemeID" name="identification"><br>
+            </div>
+            <div class="form-row">
+                <label class="formlabel" for="description">Description:</label>
+                <input type="text" id="finschemeDesc" name="Description"><br>
+            </div> 
+            <button onclick="ShowMain('Main','formfloat')">Back</button>
+
+    </div>
+
+     <!-- SCRIPTS --> 
+  <script type="text/javascript" src="javascripts/getdata.js"></script>
+  <script type="text/javascript" src="javascripts/displaydata.js"></script>
+
+</body>
+</html>
